@@ -1,0 +1,124 @@
+
+<!-- Adian lösungen -->
+<!-- element.className = "" wir haben es leer weil jedr classe in die richtige Button eingetragen. (ruft jeder classe wenn wir auf den button kicken, da leer ist ) -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: "Karla", sans-serif;
+      }
+      button {
+        background-color: #035aa6;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .wrapper {
+        max-width: 500px;
+      }
+      div {
+        border-radius: 5px;
+        padding: 2rem;
+      }
+      #element {
+          transition-property: color, font-size;
+          transition-duration: 2s;
+      }
+      .small {
+        
+        font-size: 0.8rem;
+        box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.68);
+      }
+      .middle {
+        font-size: 1.5rem;
+        box-shadow: 0px 0px 0px 20px rgba(0,0,0,0.68);
+      }
+      .big-crazy {
+        font-size: 2rem;
+        box-shadow: 0px 0px 0px 40px #649d66;
+        font-family: 'Bangers';
+        color: seagreen;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="smallMiddleBig('small')">Small</button>
+    <button onclick="smallMiddleBig('middle')">Middle</button>
+    <button onclick="smallMiddleBig('big-crazy')">Big & Crazy</button>
+    <div class="wrapper">
+
+      <div id="element" class="small">
+        <h1>Hallo classList!</h1>
+      </div>
+      
+    </div>
+    <script>
+      const element = document.getElementById("element");
+
+      function smallMiddleBig(allButtons) {
+        element.className = ""; 
+       element.classList.add(allButtons);
+      }
+    </script>
+  </body>
+</html> -->
+
+
+<!-- Mica Lösungen -->
+<!-- classList: wir geben ein class im Css und bringen diesm Class in JS -->
+<!-- wir möchten die Element änderen -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <div id="mobile" class="wrapper">
+        <div class="editing">
+            <button  onclick="small()">Small</button>
+            <button onclick="middle()">Middle</button>
+            <button onclick="big()">Big & Crazy</button>
+        </div>
+
+        <div id="element" class="small">
+            <h1 class="hallo">Hallo classList!</h1>
+        </div>
+
+    </div>
+
+    <script>
+        const element = document.getElementById("element");
+        
+    function small() {
+        element.classList.remove("middle");
+        element.classList.remove("big")
+   
+}
+    function middle() {
+    element.classList.add("middle");
+    element.classList.remove("big")
+
+}
+
+    function big() {
+    element.classList.toggle("big");
+    element.classList.remove("middle")
+}
+
+    </script>
+</body>
+</html>
